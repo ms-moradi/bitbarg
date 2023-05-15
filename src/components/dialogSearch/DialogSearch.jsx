@@ -14,6 +14,25 @@ import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
 
 const DialogSearch =({open, setOpen, coins, selectFees, setSelectFees, setTextField})=>{
+
+    const [searchFees, setSearchFees] = useState('')
+
+    const handleClose=()=>{
+        setOpen(false)
+    }
+
+    const handleSearchFees =(e)=>{
+        setSearchFees(e.target.value)
+    }
+
+    const handleSelectFees =(id)=>{
+        setTextField({Toman:'', name:''})
+        setSelectFees(coins.filter(coin => coin.id === id))
+        setTextField({Toman:selectFees[0].current_price, name:selectFees[0].name})
+        setOpen(false)
+    }
+
+
     return(
         <Dialog open={open} onClose={handleClose}>
             <DialogTitle>انتخاب ارز</DialogTitle>
