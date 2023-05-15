@@ -16,6 +16,29 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 
 const CurrentPrice =()=>{
+
+    const [coins , setCoins] = useState([])
+    const [star, setStar] = useState(false)
+    const [search , setSearch] = useState("")
+
+    const handleGetData = async () => {
+        const data = await handleGetDataCoins()
+        setCoins(data.data) 
+    }
+    
+    useEffect(()=>{
+        handleGetData()
+    },[])
+    
+    const handleStar = (id)=>{
+        const item = coins.filter(coin => coin.id === id)
+        if(item[0].id === id){
+            setStar(true)
+        }else{
+            setStar(false)
+        }
+    }
+
     return(
         <Grid container bgcolor="#fafafa" sx={{marginTop:'60px'}}>
             <Grid sx={{ width:{xs:'95%',md:'80%'},height:'auto',margin:'30px auto', backgroundColor:'#fff', borderRadius:'8px',display:'flex', flexDirection:'column',padding:{xs:'10px', md:'25px'}}}>
