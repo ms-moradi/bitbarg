@@ -12,6 +12,30 @@ import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrow
 
 
 const Home =()=>{
+    const [open, setOpen] = useState(false)
+    const [coins , setCoins] = useState([])
+    const [selectFees, setSelectFees] = useState([])
+    const [textField , setTextField] = useState({Toman:'', name:''})
+    const [unit, setUnit] = useState(1)
+
+    const handleClickOpen=()=>{
+        setOpen(true)
+    }
+
+    const handleChangeUnit=(e)=>{
+        setUnit(e.target.value)
+    }
+
+    const handleGetData = async () => {
+        const data = await handleGetDataCoins()
+        setCoins(data.data) 
+    }
+    
+    useEffect(()=>{
+        handleGetData()
+    },[])
+
+    // console.log(coins)
     return(
         <>
             <DialogSearch open={open} setOpen={setOpen} coins={coins} selectFees={selectFees} setSelectFees={setSelectFees} setTextField={setTextField} textField={textField}/>
