@@ -13,7 +13,7 @@ import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import SearchIcon from '@mui/icons-material/Search';
 
-const DialogSearch =()=>{
+const DialogSearch =({open, setOpen, coins, selectFees, setSelectFees, setTextField})=>{
     return(
         <Dialog open={open} onClose={handleClose}>
             <DialogTitle>انتخاب ارز</DialogTitle>
