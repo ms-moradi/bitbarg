@@ -16,6 +16,22 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
 const MainTable =({coins})=>{
+
+    const [state , setState] = useState(true)
+
+   
+    const handleMaximum =()=>{
+        setState(true)
+    }
+
+    const handleMinimum =()=>{
+        setState(false)
+    }
+
+    const maxValue = coins.filter(coin=>coin.price_change_percentage_24h>0);
+    const minValue = coins.filter(coin=>coin.price_change_percentage_24h<0);
+
+
     return(
         <Grid sx={{width:'100%', backgroundColor:'#fafafa',padding:{md:'60px 0'}}}>
         <Grid container  bgcolor='#fff' sx={{width:{md:'80%'},padding:{md:'30px 50px'}, margin:"0 auto",borderRadius:'10px', display:'flex', flexDirection:'column'}}>
