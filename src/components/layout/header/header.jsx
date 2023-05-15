@@ -32,8 +32,22 @@ const style = {
 }
 
 const Header =()=>{
+
+    const [open, setOpen] = useState(false);
+    const [openDrawer, setOpenDrawer] = useState(false)
+
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const handleOpenDrawer =()=>{
+        setOpenDrawer(true)
+
+    }
+    const handleCloseDrawer =()=>{
+        setOpenDrawer(false)
+    }
+
     return(
-        <>
         <>
         <Grid container  sx={{height:"64px",borderBottom:{xs:'1px solid #e0e0e0',sm:'none'}, padding:{xs:'10px',sm:'20px 45px'},position:'fixed', top:'0',backgroundColor:'white'}} >
             <Grid sx={{display:{xs:'flex',sm:'none'},justifyContent:'flex-start' }}>
@@ -134,7 +148,6 @@ const Header =()=>{
                 </Grid>
             </Grid>
         </Drawer>                   
-        </>
         </>
     )
 }
