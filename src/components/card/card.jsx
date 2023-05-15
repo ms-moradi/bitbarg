@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 
-const Card =()=>{
+const Card =({id, name , image , price, change , color,Icon})=>{
     return(
             <Grid key={id} p={2} sx={{width:'300px', height:'180px', border:'1px solid #a6a6a6', borderRadius:'10px', display:'flex' ,flexDirection:'column',gap:'10px',justifyContent:'space-between' }}>
             <Grid container item my={1} sx={{width:'230px',display:'flex' , justifyContent:'space-between', alignItems:'baseline'}}>
