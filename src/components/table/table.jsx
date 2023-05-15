@@ -15,7 +15,7 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
-const MainTable =()=>{
+const MainTable =({coins})=>{
     return(
         <Grid sx={{width:'100%', backgroundColor:'#fafafa',padding:{md:'60px 0'}}}>
         <Grid container  bgcolor='#fff' sx={{width:{md:'80%'},padding:{md:'30px 50px'}, margin:"0 auto",borderRadius:'10px', display:'flex', flexDirection:'column'}}>
