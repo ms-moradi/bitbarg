@@ -1,4 +1,4 @@
-import Item from "../../Item/Item";
+import Item from "../../item/item";
 import Grid from "@mui/material/Grid";
 import HomeIcon from '@mui/icons-material/Home';
 import WalletIcon from '@mui/icons-material/Wallet';

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -10,7 +11,7 @@ import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
 import Typography from '@mui/material/Typography';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import Card from '../Card/Card';
+import Card from '../card/card';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 

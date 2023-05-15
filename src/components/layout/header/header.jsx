@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import { Link } from "react-router-dom";
 import StyledButton from "../../../styles/styleButton";
 import Typography from '@mui/material/Typography';
@@ -12,7 +12,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import TextField from '@mui/material/TextField';
 import Drawer from '@mui/material/Drawer';
-import logo from 'assets/image/header-logo.svg';
+import logo from '../../../assets/images/header-logo.svg';
 import CloseIcon from '@mui/icons-material/Close';
 import HomeIcon from '@mui/icons-material/Home';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -51,7 +51,7 @@ const Header =()=>{
         <>
         <Grid container  sx={{height:"64px",borderBottom:{xs:'1px solid #e0e0e0',sm:'none'}, padding:{xs:'10px',sm:'20px 45px'},position:'fixed', top:'0',backgroundColor:'white'}} >
             <Grid sx={{display:{xs:'flex',sm:'none'},justifyContent:'flex-start' }}>
-                <img src={""} alt="logo" style={{width:'130px', height:'35px'}}/> 
+                <img src={logo} alt="logo" style={{width:'130px', height:'35px'}}/> 
             </Grid>
             <Grid container item sx={{display:{xs : 'none' , md : 'flex'}, justifyContent:'space-between', }}>
                 <Grid container item sx={{width:'40%',display:'flex', alignItems:'baseline',gap:'20px'}}>
@@ -84,7 +84,7 @@ const Header =()=>{
                                 <Grid sx={{width:'1.5px', height:'30px', backgroundColor:'grey',marginTop:'4px'}}></Grid>
                             </Grid>
                             <Grid container item sx={{width:'50%',justifyContent:'flex-start',alignItems:'baseline'}}>
-                                <img src={""} alt="logo" style={{width:'150px', height:'45px'}}/> 
+                                <img src={logo} alt="logo" style={{width:'150px', height:'45px'}}/> 
                             </Grid>
                             <Modal
                                 aria-labelledby="transition-modal-title"
@@ -100,7 +100,7 @@ const Header =()=>{
                                 <Fade in={open}>
                                     <Box sx={style}>
                                         <Grid container sx={{width:'100%', height:'60px', display:'flex', justifyContent:'center'}}>
-                                            <img src={""} alt="logo" style={{width:'150px' , height:'50px'}}/>
+                                            <img src={logo} alt="logo" style={{width:'150px' , height:'50px'}}/>
                                         </Grid>
                                         <Grid container bgcolor='#f1f4f6'py={3} sx={{display:'flex' , flexDirection:'column', justifyContent:'center' ,textAlign:'center'}}>
                                             <Typography variant="h5" sx={{lineHeight:'35px'}}>
@@ -129,7 +129,7 @@ const Header =()=>{
                     </IconButton>
                 </Grid>
                 <Grid container item sx={{display:'flex', justifyContent:'center'}}>
-                    <img src={""} alt="logo" style={{width:'300px' , height:'130px'}}/>
+                    <img src={logo} alt="logo" style={{width:'300px' , height:'130px'}}/>
                 </Grid>
                 <Grid container item  p={2} my={2} sx={{borderBottom:'1px solid #e0e0e0',display:'flex', flexDirection:'column', gap:'10px',}}>
                     <Link to="/" style={{textDecoration:"none"}}>
