@@ -18,6 +18,19 @@ import HomeIcon from '@mui/icons-material/Home';
 import WalletIcon from '@mui/icons-material/Wallet';
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    height:380,
+    bgcolor: 'background.paper',
+    boxShadow: 24,
+    p:1,
+}
+
 const Header =()=>{
     return(
         <>
